@@ -2,7 +2,7 @@
 // errorResponse("Error Occured");
 import { SERVER_URL } from '../config/config.js'
 
-const HandleSubmit = () => {
+export const HandleSubmit = () => {
   let inputs = document.querySelectorAll(".form-control");
   let data = {
     email: inputs[0].value,
