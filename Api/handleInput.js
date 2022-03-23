@@ -1,5 +1,7 @@
 // import {errorResponse,successResponse} from "./toster"
 
+import { SERVER_URL } from "../config/config";
+
 const HandleEnquiry = () => {
   let inputs = document.querySelectorAll(".enquireInput");
   let data = {
@@ -44,7 +46,7 @@ const HandleQoute = () => {
     data = { ...data, [name]: value };
   });
   axios
-    .post("https://sddlogistics.herokuapp.com/logistics/createqoute", data, {
+    .post(`${SERVER_URL}/logistics/createqoute`, data, {
       headers: {
         "Content-Type": "application/json",
         credentials: "include",

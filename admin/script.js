@@ -1,5 +1,7 @@
 // let tableRow = document.getElementsByClassName('table-data')
 
+import { SERVER_URL } from "../config/config";
+
 function openPopUp() {
   document.getElementById("pop-up-section").style.display = "flex";
 }
@@ -11,7 +13,7 @@ const GetQoutes = () => {
   // axios.defaults.withCredentials = true;
   axios
     // .get("https://sddlogistics.herokuapp.com/logistics/qoutes", {
-    .get("http://localhost:2080/logistics/qoutes", {
+    .get(`${SERVER_URL}/logistics/qoutes`, {
       // includes:true,
       withCredentials: true,
       //     headers: {
@@ -104,7 +106,7 @@ const StatusUpdate = () => {
   let status = document.querySelector("#status-value").value;
   axios
     .put(
-      `https://sddlogistics.herokuapp.com/logistics/status?trackId=${trackId}`,
+      `${SERVER_URL}/logistics/status?trackId${trackId}`,
       { status },
       {
         headers: {
@@ -137,7 +139,7 @@ const PasswordUpdate = () => {
   let inputs = document.querySelectorAll(".password-Id");
   let data = { oldPassword: inputs[0].value, newPassword: inputs[1].value };
   axios
-    .post(`https://sddlogistics.herokuapp.com/user/password`, data, {
+    .post(`${SERVER_URL}/user/password`, data, {
       headers: {
         "Content-Type": "application/json",
         credentials: "include",
@@ -167,9 +169,9 @@ const PasswordUpdate = () => {
 };
 
 const Logout = () => {
-  
+
   axios
-    .post(`https://sddlogistics.herokuapp.com/user/logout`, {
+    .post(`${SERVER_URL}/user/logout`, {
       // headers: {
       //   "Content-Type": "application/json",
       //   credentials: "include",
@@ -193,7 +195,7 @@ const LocationUpdate = () => {
   let location = document.querySelector("#location-value").value;
   axios
     .put(
-      `https://sddlogistics.herokuapp.com/logistics/location?trackId=${trackId}`,
+      `${SERVER_URL}/logistics/location?trackId=${trackId}`,
       { location },
       {
         headers: {

@@ -1,3 +1,5 @@
+import { SERVER_URL } from "../config/config";
+
 const GetItem = () => {
   const urlParams = new URLSearchParams(window.location.search);
   const Id = urlParams.get("id");
@@ -7,7 +9,7 @@ const GetItem = () => {
   document.querySelector("#trackId").textContent = Id;
 
   axios
-    .get(`https://sddlogistics.herokuapp.com/logistics/trackitem?trackId=${Id}`, {
+    .get(`${SERVER_URL}/logistics/trackitem?trackId=${Id}`, {
       headers: {
         "Content-Type": "application/json",
         credentials: "include",

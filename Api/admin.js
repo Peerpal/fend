@@ -1,5 +1,6 @@
 // successResponse("successfully Sent");
 // errorResponse("Error Occured");
+import {SERVER_URL} from '../config/config'
 
 const HandleSubmit = () => {
   let inputs = document.querySelectorAll(".form-control");
@@ -10,7 +11,7 @@ const HandleSubmit = () => {
   axios.defaults.withCredentials = true;
 
   axios
-    .post("http://localhost:2080/user/login", data, {
+    .post(`${SERVER_URL}/user/login`, data, {
     // .post("https://sddlogistics.herokuapp.com/user/login", data, {
       headers: {
         "Content-Type": "application/json",
@@ -22,7 +23,7 @@ const HandleSubmit = () => {
             if(res.status == 200){
                 successResponse(` ${res.data.message}`)
                window.location.replace("/admin/admindash.html")
-            } 
+            }
              if(res.status == 206){
                 errorResponse(`Error: ${res.data.message}`)
             }
