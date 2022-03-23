@@ -1,6 +1,6 @@
 // import {errorResponse,successResponse} from "./toster"
 
-import { SERVER_URL } from "../config/config";
+import { SERVER_URL } from "../config/config.js";
 
 const HandleEnquiry = () => {
   let inputs = document.querySelectorAll(".enquireInput");

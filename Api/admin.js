@@ -1,6 +1,6 @@
 // successResponse("successfully Sent");
 // errorResponse("Error Occured");
-import {SERVER_URL} from '../config/config'
+import { SERVER_URL } from '../config/config.js'
 
 const HandleSubmit = () => {
   let inputs = document.querySelectorAll(".form-control");

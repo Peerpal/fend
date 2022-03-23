@@ -1,6 +1,6 @@
 // let tableRow = document.getElementsByClassName('table-data')
 
-import { SERVER_URL } from "../config/config";
+import { SERVER_URL } from "../config/config.js";
 
 function openPopUp() {
   document.getElementById("pop-up-section").style.display = "flex";

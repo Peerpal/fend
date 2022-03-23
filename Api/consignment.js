@@ -1,4 +1,4 @@
-import { SERVER_URL } from "../config/config";
+import { SERVER_URL } from "../config/config.js";
 
 const GetItem = () => {
   const urlParams = new URLSearchParams(window.location.search);
