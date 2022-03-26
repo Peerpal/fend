@@ -1,6 +1,6 @@
 // let tableRow = document.getElementsByClassName('table-data')
 
-import { SERVER_URL } from "../config/config.js";
+let SERVER_URL = "https://logistics-back.herokuapp.com";
 
 function openPopUp() {
   document.getElementById("pop-up-section").style.display = "flex";
@@ -106,7 +106,7 @@ const StatusUpdate = () => {
   let status = document.querySelector("#status-value").value;
   axios
     .put(
-      `${SERVER_URL}/logistics/status?trackId${trackId}`,
+      `${SERVER_URL}/logistics/status?trackId=${trackId}`,
       { status },
       {
         headers: {

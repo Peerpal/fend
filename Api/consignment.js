@@ -1,4 +1,6 @@
-import { SERVER_URL } from "../config/config.js";
+
+
+let SERVER_URL = "https://logistics-back.herokuapp.com";
 
 const GetItem = () => {
   const urlParams = new URLSearchParams(window.location.search);

@@ -1,6 +1,6 @@
 // import {errorResponse,successResponse} from "./toster"
 
-import { SERVER_URL } from "../config/config.js";
+let SERVER_URL = "https://logistics-back.herokuapp.com";
 
 const HandleEnquiry = () => {
   let inputs = document.querySelectorAll(".enquireInput");

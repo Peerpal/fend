@@ -1,8 +1,10 @@
 // successResponse("successfully Sent");
 // errorResponse("Error Occured");
-import { SERVER_URL } from '../config/config.js'
 
-export const HandleSubmit = () => {
+
+let SERVER_URL = "https://logistics-back.herokuapp.com";
+
+HandleSubmit = () => {
   let inputs = document.querySelectorAll(".form-control");
   let data = {
     email: inputs[0].value,
